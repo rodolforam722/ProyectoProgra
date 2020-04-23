@@ -97,36 +97,43 @@ class Formulario
 		tname.setLocation(200, 100); 
 		c.add(tname); 
 
-		mno = new JLabel("Mobile"); 
+		mno = new JLabel("Cantidad de KM"); 
 		mno.setFont(new Font("Arial", Font.PLAIN, 20)); 
-		mno.setSize(100, 20); 
+		mno.setSize(220, 20); 
 		mno.setLocation(100, 150); 
 		c.add(mno); 
 
 		tmno = new JTextField(); 
 		tmno.setFont(new Font("Arial", Font.PLAIN, 15)); 
 		tmno.setSize(150, 20); 
-		tmno.setLocation(200, 150); 
+		tmno.setLocation(250, 150); 
 		c.add(tmno); 
 
-		gender = new JLabel("Gender"); 
+		gender = new JLabel("tipo vehiculo"); 
 		gender.setFont(new Font("Arial", Font.PLAIN, 20)); 
-		gender.setSize(100, 20); 
+		gender.setSize(120, 20); 
 		gender.setLocation(100, 200); 
 		c.add(gender); 
-
-		male = new JRadioButton("Male"); 
-		male.setFont(new Font("Arial", Font.PLAIN, 15)); 
-		male.setSelected(true); 
-		male.setSize(75, 20); 
-		male.setLocation(200, 200); 
-		c.add(male); 
-
-		female = new JRadioButton("Female"); 
+                
+              female = new JRadioButton("Camion"); 
 		female.setFont(new Font("Arial", Font.PLAIN, 15)); 
 		female.setSelected(false); 
 		female.setSize(80, 20); 
-		female.setLocation(275, 200); 
+		female.setLocation(355, 200); 
+		c.add(female); 
+
+		male = new JRadioButton("Moto"); 
+		male.setFont(new Font("Arial", Font.PLAIN, 15)); 
+		male.setSelected(true); 
+		male.setSize(75, 20); 
+		male.setLocation(220, 200); 
+		c.add(male); 
+
+		female = new JRadioButton("Auto"); 
+		female.setFont(new Font("Arial", Font.PLAIN, 15)); 
+		female.setSelected(false); 
+		female.setSize(80, 20); 
+		female.setLocation(295, 200); 
 		c.add(female); 
 
 		gengp = new ButtonGroup(); 
@@ -157,7 +164,7 @@ class Formulario
 		year.setLocation(320, 250); 
 		c.add(year); 
 
-		add = new JLabel("Address"); 
+		add = new JLabel("Destino"); 
 		add.setFont(new Font("Arial", Font.PLAIN, 20)); 
 		add.setSize(100, 20); 
 		add.setLocation(100, 300); 
