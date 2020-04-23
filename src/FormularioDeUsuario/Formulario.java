@@ -18,7 +18,7 @@ import java.awt.*;
 import java.awt.event.*; 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-class FormularioRegistro 
+class Formulario 
 	extends JFrame 
 	implements ActionListener { 
 
@@ -69,7 +69,7 @@ class FormularioRegistro
 
 	// constructor, to initialize the components 
 	// with default values. 
-	public FormularioRegistro() 
+	public Formulario() 
 	{ 
 		setTitle("Registration Form"); 
 		setBounds(300, 90, 900, 600); 
