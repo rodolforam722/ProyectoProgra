@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package FormularioDeUsuario;
+package Formulario;
 
 /**
  *
@@ -18,7 +18,7 @@ import java.awt.*;
 import java.awt.event.*; 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-class Formulario 
+class Formulario
 	extends JFrame 
 	implements ActionListener { 
 
@@ -97,43 +97,36 @@ class Formulario
 		tname.setLocation(200, 100); 
 		c.add(tname); 
 
-		mno = new JLabel("Cantidad de KM"); 
+		mno = new JLabel("Mobile"); 
 		mno.setFont(new Font("Arial", Font.PLAIN, 20)); 
-		mno.setSize(220, 20); 
+		mno.setSize(100, 20); 
 		mno.setLocation(100, 150); 
 		c.add(mno); 
 
 		tmno = new JTextField(); 
 		tmno.setFont(new Font("Arial", Font.PLAIN, 15)); 
 		tmno.setSize(150, 20); 
-		tmno.setLocation(250, 150); 
+		tmno.setLocation(200, 150); 
 		c.add(tmno); 
 
-		gender = new JLabel("tipo vehiculo"); 
+		gender = new JLabel("Gender"); 
 		gender.setFont(new Font("Arial", Font.PLAIN, 20)); 
-		gender.setSize(120, 20); 
+		gender.setSize(100, 20); 
 		gender.setLocation(100, 200); 
 		c.add(gender); 
-                
-              female = new JRadioButton("Camion"); 
-		female.setFont(new Font("Arial", Font.PLAIN, 15)); 
-		female.setSelected(false); 
-		female.setSize(80, 20); 
-		female.setLocation(355, 200); 
-		c.add(female); 
 
-		male = new JRadioButton("Moto"); 
+		male = new JRadioButton("Male"); 
 		male.setFont(new Font("Arial", Font.PLAIN, 15)); 
 		male.setSelected(true); 
 		male.setSize(75, 20); 
-		male.setLocation(220, 200); 
+		male.setLocation(200, 200); 
 		c.add(male); 
 
-		female = new JRadioButton("Auto"); 
+		female = new JRadioButton("Female"); 
 		female.setFont(new Font("Arial", Font.PLAIN, 15)); 
 		female.setSelected(false); 
 		female.setSize(80, 20); 
-		female.setLocation(295, 200); 
+		female.setLocation(275, 200); 
 		c.add(female); 
 
 		gengp = new ButtonGroup(); 
@@ -164,7 +157,7 @@ class Formulario
 		year.setLocation(320, 250); 
 		c.add(year); 
 
-		add = new JLabel("Destino"); 
+		add = new JLabel("Address"); 
 		add.setFont(new Font("Arial", Font.PLAIN, 20)); 
 		add.setSize(100, 20); 
 		add.setLocation(100, 300); 
@@ -276,4 +269,3 @@ class Formulario
 	} 
     
 }
-
