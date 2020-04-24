@@ -82,7 +82,7 @@ class Formulario
 		title = new JLabel("Registro De Usuario"); 
 		title.setFont(new Font("Arial", Font.PLAIN, 30)); 
 		title.setSize(300, 30); 
-		title.setLocation(300, 30); 
+		title.setLocation(300, 31); 
 		c.add(title); 
 
 		name = new JLabel("Nombre"); 
@@ -122,6 +122,8 @@ class Formulario
 		male.setSize(90, 20); 
 		male.setLocation(220, 200); 
 		c.add(male); 
+                
+                
 
 		female = new JRadioButton("Mujer"); 
 		female.setFont(new Font("Arial", Font.PLAIN, 15)); 
