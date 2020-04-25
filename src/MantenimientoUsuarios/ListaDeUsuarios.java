@@ -15,39 +15,36 @@ package MantenimientoUsuarios;
 
 
 // java Program to create a simple JList 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 import javax.swing.*; 
 
 class ListaDeUsuarios
         extends JFrame 
-	implements ActionListener { 
+	{ 
 	
 	//frame 
 	static JFrame f;  
 	
 	//lists 
 	static JList b; 
+        
+        
 
 
 	//main class 
-	public static void main(String[] args) 
+	public void iniciarVentana()
 	{ 
 		//create a new frame 
-		f = new JFrame("frame"); 
+		f = new JFrame("Listado de usuarios"); 
 		
-		//create a object 
-		ListaDeUsuarios s=new ListaDeUsuarios(); 
 		
 		//create a panel 
 		JPanel p =new JPanel(); 
 		
-		//create a new label 
-		JLabel l= new JLabel("Seleccione el usuario que desee ver"); 
+		
+		 
 
-		//String array to store weekdays 
-		String week[]= { "Andrey","Alejandro","Marcos", 
-						"Andres","Rafael","Jafeth","Mariana"}; 
+		 String week[]= new String[100]; 
 		
 		//create list 
 		b= new JList(week); 
@@ -66,10 +63,7 @@ class ListaDeUsuarios
 		f.show(); 
 	} 
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
 	
 	
 } 
@@ -78,7 +72,7 @@ class ListaDeUsuarios
 
     
 
-	// Components of the Form 
+
 	
 		
 	 

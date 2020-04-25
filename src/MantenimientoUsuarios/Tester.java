@@ -12,6 +12,7 @@ package MantenimientoUsuarios;
 public class Tester {
     public static void main(String[] args) throws Exception 
     { 
-        ListaDeUsuarios f = new ListaDeUsuarios(); 
+        ListaDeUsuarios f = new ListaDeUsuarios();
+        f.iniciarVentana();
     } 
 }
