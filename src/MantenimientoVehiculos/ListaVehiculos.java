@@ -1,14 +1,87 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package MantenimientoVehiculos;
+//Jesus Suarez
 
-/**
- *
- * @author jdsb1
- */
-public class ListaVehiculos {
-    
+import javax.swing.event.*; 
+import java.awt.*; 
+import javax.swing.*; 
+class solve extends JFrame implements ListSelectionListener 
+{ 
+      
+    //frame 
+    static JFrame f; 
+      
+    //lists 
+    static JList b,b1,b2; 
+      
+    //label 
+    static JLabel l1; 
+   
+  
+    //main class 
+    public static void main(String[] args) 
+    { 
+        //create a new frame  
+        f = new JFrame("frame"); 
+          
+        //create a object 
+        solve s=new solve(); 
+        
+        //create a panel 
+        JPanel p =new JPanel(); 
+          
+        //create a new label 
+        JLabel l= new JLabel("Escoge uno de los vehiculos disponibles"); 
+        l1= new JLabel(); 
+  
+        //String array to store weekdays 
+        String month[]= { "January", "February", "March", 
+        "April", "May", "June", "July", "August",  
+        "September", "October", "November", "December"}; 
+          
+        //create a array for months and year  
+        String date[]=new String[31],year[]=new String[31]; 
+          
+        //add month number and year to list 
+        for(int i=0;i<31;i++) 
+        { 
+            date[i]=""+(int)(i+1); 
+            year[i]=""+(int)(2018-i); 
+        } 
+          
+        //create lists 
+        b= new JList(date); 
+          
+        //set a selected index 
+        b.setSelectedIndex(2); 
+          
+        l1.setText(b.getSelectedValue()+" "+b1.getSelectedValue() 
+                              +" "+b2.getSelectedValue()); 
+          
+        //add item listener 
+        b.addListSelectionListener(s); 
+ 
+          
+        //add list to panel 
+        p.add(l); 
+        p.add(b); 
+        p.add(b1); 
+        p.add(b2); 
+        p.add(l1); 
+   
+        f.add(p); 
+          
+        //set the size of frame 
+        f.setSize(500,600); 
+           
+        f.show(); 
+    } 
+    public void valueChanged(ListSelectionEvent e) 
+    { 
+        //set the text of the label to the selected value of lists 
+        l1.setText(b.getSelectedValue()+" "+b1.getSelectedValue() 
+                              +" "+b2.getSelectedValue()); 
+          
+    } 
+      
+      
 }
