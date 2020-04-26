@@ -5,6 +5,5 @@ package MantenimientoVehiculos;
 public class Tester {
     public static void main(String[] args) throws Exception 
     { 
-        ListaVehiculo v = new ListaVehiculo(); 
     } 
 }

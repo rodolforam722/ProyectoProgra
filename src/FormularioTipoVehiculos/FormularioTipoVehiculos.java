@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package FormularioTipoVehiculos;
 
 /**
@@ -18,7 +13,7 @@ import java.awt.*;
 import java.awt.event.*; 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-class FormularioTipoVehiculos 
+class FormularioTipoVehiculos
 	extends JFrame 
 	implements ActionListener { 
 
@@ -30,8 +25,9 @@ class FormularioTipoVehiculos
 	private JLabel mno; 
 	private JTextField tmno; 
 	private JLabel gender; 
-	private JRadioButton male; 
-	private JRadioButton female; 
+	private JRadioButton Carro; 
+	private JRadioButton Moto;
+        private JRadioButton Camioneta;
 	private ButtonGroup gengp; 
 	private JLabel dob; 
 	private JComboBox date; 
@@ -71,7 +67,7 @@ class FormularioTipoVehiculos
 	// with default values. 
 	public FormularioTipoVehiculos() 
 	{ 
-		setTitle("Regristro De Vehiculo"); 
+		setTitle("Regristro De Vehiculos"); 
 		setBounds(300, 90, 900, 600); 
 		setDefaultCloseOperation(EXIT_ON_CLOSE); 
 		setResizable(false); 
@@ -79,101 +75,105 @@ class FormularioTipoVehiculos
 		c = getContentPane(); 
 		c.setLayout(null); 
 
-		title = new JLabel("Registro De Vehiculo"); 
+		title = new JLabel("Registro De Vehiuclos"); 
 		title.setFont(new Font("Arial", Font.PLAIN, 30)); 
 		title.setSize(300, 30); 
-		title.setLocation(300, 30); 
+		title.setLocation(300, 31); 
 		c.add(title); 
 
-		name = new JLabel("Nombre"); 
+		name = new JLabel("Marca"); 
 		name.setFont(new Font("Arial", Font.PLAIN, 20)); 
 		name.setSize(100, 20); 
-		name.setLocation(100, 100); 
+		name.setLocation(50, 100); 
 		c.add(name); 
 
 		tname = new JTextField(); 
 		tname.setFont(new Font("Arial", Font.PLAIN, 15)); 
 		tname.setSize(190, 20); 
-		tname.setLocation(200, 100); 
+		tname.setLocation(160, 100); 
 		c.add(tname); 
 
-		mno = new JLabel("Cantidad de KM"); 
+		mno = new JLabel("Modelo"); 
 		mno.setFont(new Font("Arial", Font.PLAIN, 20)); 
 		mno.setSize(220, 20); 
-		mno.setLocation(100, 150); 
+		mno.setLocation(50, 150); 
 		c.add(mno); 
 
 		tmno = new JTextField(); 
 		tmno.setFont(new Font("Arial", Font.PLAIN, 15)); 
-		tmno.setSize(150, 20); 
-		tmno.setLocation(250, 150); 
+		tmno.setSize(190, 20); 
+		tmno.setLocation(230, 150); 
 		c.add(tmno); 
 
-		gender = new JLabel("tipo vehiculo"); 
+		gender = new JLabel("Tipos"); 
 		gender.setFont(new Font("Arial", Font.PLAIN, 20)); 
 		gender.setSize(120, 20); 
-		gender.setLocation(100, 200); 
+		gender.setLocation(50, 200); 
 		c.add(gender); 
                 
-              female = new JRadioButton("Camion"); 
-		female.setFont(new Font("Arial", Font.PLAIN, 15)); 
-		female.setSelected(false); 
-		female.setSize(80, 20); 
-		female.setLocation(355, 200); 
-		c.add(female); 
+             
+		Carro = new JRadioButton("Carro"); 
+		Carro.setFont(new Font("Arial", Font.PLAIN, 15)); 
+		Carro.setSelected(true); 
+		Carro.setSize(90, 20); 
+		Carro.setLocation(220, 200); 
+		c.add(Carro); 
+                
+                
 
-		male = new JRadioButton("Moto"); 
-		male.setFont(new Font("Arial", Font.PLAIN, 15)); 
-		male.setSelected(true); 
-		male.setSize(75, 20); 
-		male.setLocation(220, 200); 
-		c.add(male); 
-
-		female = new JRadioButton("Auto"); 
-		female.setFont(new Font("Arial", Font.PLAIN, 15)); 
-		female.setSelected(false); 
-		female.setSize(80, 20); 
-		female.setLocation(295, 200); 
-		c.add(female); 
+		Moto = new JRadioButton("Moto"); 
+		Moto.setFont(new Font("Arial", Font.PLAIN, 15)); 
+		Moto.setSelected(false); 
+		Moto.setSize(80, 20); 
+		Moto.setLocation(310, 200); 
+		c.add(Moto);
+                
+                Camioneta = new JRadioButton("Camioneta"); 
+		Camioneta.setFont(new Font("Arial", Font.PLAIN, 15)); 
+		Camioneta.setSelected(false); 
+		Camioneta.setSize(80, 20); 
+		Camioneta.setLocation(310, 200); 
+		c.add(Camioneta);
 
 		gengp = new ButtonGroup(); 
-		gengp.add(male); 
-		gengp.add(female); 
+		gengp.add(Carro); 
+		gengp.add(Moto);
+                gengp.add(Camioneta);
 
-		dob = new JLabel("Tiempo deseado"); 
+		dob = new JLabel("Año del vehiculo"); 
 		dob.setFont(new Font("Arial", Font.PLAIN, 20)); 
 		dob.setSize(200, 20); 
-		dob.setLocation(100, 250); 
+		dob.setLocation(50, 250); 
 		c.add(dob); 
 
-		date = new JComboBox(dates); 
+		/*date = new JComboBox(dates); 
 		date.setFont(new Font("Arial", Font.PLAIN, 15)); 
 		date.setSize(50, 20); 
-		date.setLocation(350, 250); 
+		date.setLocation(260, 250); 
 		c.add(date); 
 
 		month = new JComboBox(months); 
 		month.setFont(new Font("Arial", Font.PLAIN, 15)); 
 		month.setSize(60, 20); 
-		month.setLocation(250, 250); 
-		c.add(month); 
+		month.setLocation(330, 250); 
+		c.add(month);*/ 
 
 		year = new JComboBox(years); 
 		year.setFont(new Font("Arial", Font.PLAIN, 15)); 
-		year.setSize(60, 20); 
-		year.setLocation(420, 250); 
+		year.setSize(70, 40); 
+		year.setLocation(330, 250); 
 		c.add(year); 
 
-		add = new JLabel("Destino"); 
+		add = new JLabel("Descripcion"); 
 		add.setFont(new Font("Arial", Font.PLAIN, 20)); 
-		add.setSize(100, 20); 
-		add.setLocation(100, 300); 
+		add.setSize(200, 20); 
+		add.setLocation(50, 300); 
 		c.add(add); 
 
 		tadd = new JTextArea(); 
 		tadd.setFont(new Font("Arial", Font.PLAIN, 15)); 
-		tadd.setSize(200, 75); 
-		tadd.setLocation(200, 300); 
+		tadd.setSize(200, 20); 
+		tadd.setLocation(190, 300); 
 		tadd.setLineWrap(true); 
 		c.add(tadd); 
 
@@ -230,27 +230,26 @@ class FormularioTipoVehiculos
 			if (term.isSelected()) { 
 				String data1; 
 				String data 
-					= "Name : "
+					= "Nombre : "
 					+ tname.getText() + "\n"
-					+ "Mobile : "
+					+ "Correo : "
 					+ tmno.getText() + "\n"; 
-				if (male.isSelected()) 
-					data1 = "Gender : Male"
+				if (Carro.isSelected()) 
+					data1 = "Tipo : Carro"
 							+ "\n"; 
-				else
-					data1 = "Gender : Female"
-							+ "\n"; 
+                                else
+					data1 = "Tipo : Moto"
+							+ "\n";
+                                   
 				String data2 
-					= "DOB : "
-					+ (String)date.getSelectedItem() 
-					+ "/" + (String)month.getSelectedItem() 
+					= "Año : "
 					+ "/" + (String)year.getSelectedItem() 
 					+ "\n"; 
 
-				String data3 = "Address : " + tadd.getText(); 
+				String data3 = "Descripcion : " + tadd.getText(); 
 				tout.setText(data + data1 + data2 + data3); 
 				tout.setEditable(false); 
-				res.setText("Registration Successfully.."); 
+				res.setText("Registro completado.."); 
 			} 
 			else { 
 				tout.setText(""); 
